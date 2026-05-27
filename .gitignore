@@ -1,0 +1,23 @@
+# Local Android SDK path - machine specific
+local.properties
+
+# Build outputs
+app/build/
+build/
+
+# APK files
+*.apk
+
+# Gradle cache and wrapper jar (properties file is kept, jar is not)
+.gradle/
+gradle/wrapper/gradle-wrapper.jar
+
+# Android Studio project files
+*.iml
+.idea/
+*.iws
+*.ipr
+
+# OS cruft
+.DS_Store
+Thumbs.db

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Crop/preview area - takes most of the screen -->
+    <com.example.mukistaja.CropView
+        android:id="@+id/cropView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#222222"/>
+
+    <!-- Controls below -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="#1A1A1A">
+
+        <!-- Image controls row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btnPickImage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pick Image"
+                android:layout_marginEnd="6dp"/>
+
+            <Button
+                android:id="@+id/btnRotate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Rotate 90°"
+                android:layout_marginStart="6dp"/>
+        </LinearLayout>
+
+        <!-- BLE controls row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btnScan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Scan Devices"
+                android:layout_marginEnd="6dp"/>
+
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Send to Muki"
+                android:enabled="false"
+                android:layout_marginStart="6dp"/>
+        </LinearLayout>
+
+        <!-- Device list (hidden until scan) -->
+        <TextView
+            android:id="@+id/tvDeviceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tap your Muki:"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:layout_marginBottom="4dp"/>
+
+        <ListView
+            android:id="@+id/listDevices"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            android:background="#333333"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:visibility="invisible"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick an image to get started."
+            android:textColor="#CCCCCC"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
