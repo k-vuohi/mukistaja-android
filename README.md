@@ -44,7 +44,7 @@ The Muki screen is 176×264 pixels, 1-bit (pure black and white). Mukistaja port
 Requirements: Android Studio, JDK 17, Android SDK 34.
 
 ```bash
-git clone https://github.com/YOURUSERNAME/mukistaja.git
+git clone https://github.com/k-vuohi/mukistaja.git
 cd mukistaja-android
 ./gradlew assembleDebug
 # APK: app/build/outputs/apk/debug/mukistaja.apk
